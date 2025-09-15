@@ -17,7 +17,7 @@ function launchab() {
     window.parent.window.location.replace('about:blank');
 }
 
-if (window.location.href !== "about:blank") {
+if (window.parent.location !== "about:blank") {
 	launchab();
 }
 
