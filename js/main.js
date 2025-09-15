@@ -159,10 +159,10 @@ $(hitButton).click(hit);
 $(standButton).click(stand);
 $(playAgainButton).click(newGame);
 $("#reset-game").click(resetGame);
-$("#add-1-chips").click(addChips1);
-$("#add-10-chips").click(addChips10);
-$("#add-100-chips").click(addChips100);
-$("#add-1000-chips").click(addChips1000);
+$("#add-1-chips").click(addChips(1));
+$("#add-10-chips").click(addChips(10));
+$("#add-100-chips").click(addChips(100));
+$("#add-1000-chips").click(addChips(1000));
 
 $(".reduce-aces-button").click(   // Can only see this if player draws 2 aces, would only be reducing in 1st deck
 	function(){
