@@ -1,9 +1,10 @@
 // Starting game board values
 var cardsInDeck;
+$("#dev-menu").hide();
 
 function addChips(amount) {
-	currentChipBalance += amount;
-	localStorage.setItem("blackjackChips", currentChipBalance);
+	currentChipBalance = parseInt(currentChipBalance, 10) + amount;
+	updateVisibleChipBalances();
 }
 
 $( document ).ready(function() {
