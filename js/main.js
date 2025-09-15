@@ -15,11 +15,7 @@ function launchab() {
     iframe.src = self.location;
     tab.document.body.appendChild(iframe);
     window.parent.window.location.replace('about:blank');
-}
-
-if (window.parent.location !== "about:blank") {
-	launchab();
-}
+};
 
 function addChips(amount) {
 	currentChipBalance = parseInt(currentChipBalance, 10) + amount;
@@ -164,8 +160,12 @@ $("#chip-50").click(function(){selectWager(50)});
 $("#chip-100").click(function(){selectWager(100)});
 document.addEventListener("keypress", (e) => {
 	if (e.key == '`') {
-		console.log('Backtick key pressed!');
 		$("#dev-menu").toggle();
+	}
+});
+document.addEventListener("keypress", (e) => {
+	if (e.key == ' ') {
+		launchab();
 	}
 });
 
