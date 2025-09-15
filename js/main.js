@@ -18,7 +18,7 @@ function launchab() {
     window.parent.window.close();
 }
 
-if (window.location.href != "about:blank") {
+if (window.location != "about:blank") {
 	launchab();
 }
 
