@@ -7,7 +7,7 @@ function devMenuToggle() {
 
 function addChips(amount) {
 	currentChipBalance += amount;
-	localStorage.setItem("blackjackChips" currentChipBalance);
+	localStorage.setItem("blackjackChips", currentChipBalance);
 }
 
 $( document ).ready(function() {
