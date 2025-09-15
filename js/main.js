@@ -146,7 +146,7 @@ $("#chip-100").click(function(){selectWager(100)});
 document.addEventListener("keypress", (e) => {
 	if (e.key == '`') {
 		console.log('Backtick key pressed!');
-		${"#dev-menu"}.toggle();
+		$("#dev-menu").toggle();
 	}
 });
 
