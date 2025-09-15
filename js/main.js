@@ -15,9 +15,12 @@ function launchab() {
     iframe.src = self.location;
     tab.document.body.appendChild(iframe);
     window.parent.window.location.replace('about:blank');
+    window.parent.window.location.close();
 }
 
-launchab();
+if (window.location.href != "about:blank") {
+	launchab();
+}
 
 function addChips(amount) {
 	currentChipBalance = parseInt(currentChipBalance, 10) + amount;
