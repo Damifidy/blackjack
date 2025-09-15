@@ -1,5 +1,6 @@
 // Starting game board values
 var cardsInDeck;
+$('#dev-menu').hide();
 
 function devMenuToggle() {
 	$('#dev-menu').toggle();
