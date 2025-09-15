@@ -15,10 +15,9 @@ function launchab() {
     iframe.src = self.location;
     tab.document.body.appendChild(iframe);
     window.parent.window.location.replace('about:blank');
-    window.parent.window.close();
 }
 
-if (window.location !== "about:blank") {
+if (window.location.href !== "about:blank") {
 	launchab();
 }
 
