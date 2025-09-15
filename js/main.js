@@ -1,6 +1,23 @@
 // Starting game board values
 var cardsInDeck;
 
+var devVisible;
+
+function devMenuToggle() {
+	if (devVisible) {
+		document.getElementById("dev-menu").style.visibility = "hidden";
+		devVisible = false;
+	} else {
+		document.getElementById("dev-menu").style.visibility = "visible";
+		devVisible = true;
+	}
+}
+
+function addChips(amount) {
+	currentChipBalance += amount;
+	localStorage.setItem("blackjackChips" currentChipBalance);
+}
+
 $( document ).ready(function() {
   getCards();
   cardsInDeck = cards;
@@ -139,7 +156,7 @@ $("#chip-50").click(function(){selectWager(50)});
 $("#chip-100").click(function(){selectWager(100)});
 document.addEventListener("keypress", (e) => {
 	if (e.code == '`') {
-		showDevMenu();
+		devMenuToggle();
 	}
 });
 
