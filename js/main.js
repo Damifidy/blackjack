@@ -2,10 +2,6 @@
 var cardsInDeck;
 $('#dev-menu').hide();
 
-function devMenuToggle() {
-	$('#dev-menu').toggle();
-}
-
 function addChips(amount) {
 	currentChipBalance += amount;
 	localStorage.setItem("blackjackChips", currentChipBalance);
@@ -150,7 +146,7 @@ $("#chip-100").click(function(){selectWager(100)});
 document.addEventListener("keypress", (e) => {
 	if (e.key == '`') {
 		console.log('Backtick key pressed!');
-		devMenuToggle();
+		${"#dev-menu"}.toggle();
 	}
 });
 
