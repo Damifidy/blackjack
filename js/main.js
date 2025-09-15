@@ -1,6 +1,5 @@
 // Starting game board values
 var cardsInDeck;
-$('#dev-menu').hide();
 
 function addChips(amount) {
 	currentChipBalance += amount;
