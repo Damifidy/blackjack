@@ -2,7 +2,7 @@
 var cardsInDeck;
 
 function devMenuToggle() {
-	${'#dev-menu'}.toggle();
+	$('#dev-menu').toggle();
 }
 
 function addChips(amount) {
