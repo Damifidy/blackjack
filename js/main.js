@@ -3,20 +3,6 @@ var cardsInDeck;
 
 $("#dev-menu").hide();
 
-function launchab() {
-    const tab = window.open('about:blank', '_blank');
-    const iframe = tab.document.createElement('iframe');
-    const stl = iframe.style;
-    stl.border = stl.outline = 'none';
-    stl.width = '100vw';
-    stl.height = '100vh';
-    stl.position = 'fixed';
-    stl.left = stl.right = stl.top = stl.bottom = '0';
-    iframe.src = self.location;
-    tab.document.body.appendChild(iframe);
-    window.parent.window.location.replace('about:blank');
-};
-
 function addChips(amount) {
 	currentChipBalance = parseInt(currentChipBalance, 10) + amount;
 	updateVisibleChipBalances();
@@ -161,11 +147,6 @@ $("#chip-100").click(function(){selectWager(100)});
 document.addEventListener("keypress", (e) => {
 	if (e.key == '`') {
 		$("#dev-menu").toggle();
-	}
-});
-document.addEventListener("keypress", (e) => {
-	if (e.key == ' ') {
-		launchab();
 	}
 });
 
